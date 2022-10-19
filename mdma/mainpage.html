@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="icon" href="mdma.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecstasy Worldwide</title>
+</head>
+<body>
+    <div id="section1">
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <a href="#section1"><img src="medicine.png"></a>
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    <li><a href="#section1">Home</a></li>
+                    <li><a href="#section3">About ecstasy</a></li>
+                    <li><a href="#section2">Store</a></li>
+                    <li><a href="login.html"><img src="user.png"></a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="maintext">
+        </div>
+    </div>
+    <div id="section2">
+        <p class="store">Store</p>
+        <div class="dolog">
+            <img id="banner" src="banner.gif">
+         </div>
+        <div id="card_holder">
+            <div class="card">
+                <div class="top">
+                    <h1>Cannabis</h1>
+                </div>
+                <img src="cannabis.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card middle">
+                <div class="top">
+                    <div id="bestseller">
+                        Best seller
+                    </div>
+                    <h1>Ecstasy</h1>
+                </div>
+                <img src="pills.png">
+                <a href="ecstasy.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Cocaine</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+        </div>
+    </div>
+    <div id="section3">
+        <p class="faq">About ecstasy</p>
+    </div>
+    <div id="footer">
+        <p>Ecstasy worldwide &copy 2022 - The safest way to explore the beauity of the ecstasy.</p>
+    </div>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+    cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+    window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+</body>
+</html>

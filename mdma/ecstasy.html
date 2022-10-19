@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ecstasy.css">
+    <link rel="icon" href="mdma.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecstasy Worldwide</title>
+</head>
+<body>
+    <div id="content">
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <a href="#section1"><img src="medicine.png"></a>
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    <li><a href="mainpage.html">Home</a></li>
+                    <li><a href="mainpage.html#section3">About ecstasy</a></li>
+                    <li><a href="mainpage.html#section2">Store</a></li>
+                    <li><a href="login.html"><img src="user.png"></a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+        <p class="store">Our product's</p>
+        <div id="card_holder">
+            <div class="card">
+                <div class="top">
+                    <h1>RedBull Ecstasy</h1>
+                </div>
+                <img src="cannabis.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Punisher Ecstasy</h1>
+                </div>
+                <img src="pills.png">
+                <a href="ecstasy.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Philipp Plein Ecstasy</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>La Casa de Papel Ecstasy</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Rolls Royce Ecstasy</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>6ix9ine Ecstasy</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Cocaine</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <h1>Cocaine</h1>
+                </div>
+                <img src="cocaine.png">
+                <a href="guns.html">Shop</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+    cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+    window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+</body>
+</html>
